@@ -1,3 +1,19 @@
+===
+This forks adds the SeattleRbSyslogOutputter outputter. It uses the SyslogLogger gem from Seattle.rb, which is a wrapper around the Syslog standard Ruby class.
+This outputter, unlike SyslogOutputter provided by Log4r, does not set application-wide custom levels, so it does not break other loggers and outputters.
+
+To load it, add this to your Yaml configuration file:
+
+- type        : SeattleRbSyslogOutputter
+  name        : syslog
+  level       : DEBUG
+  application : my_application_configured_in_syslog_conf
+  # Syslog adds the pid and the date itself
+  formatter:
+    pattern     : '<%C> %l: %m'
+    type        : PatternFormatter
+===
+
 log4r
 =====
 

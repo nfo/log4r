@@ -13,6 +13,7 @@ require "log4r/outputter/consoleoutputters"
 require "log4r/outputter/staticoutputter"
 require "log4r/outputter/rollingfileoutputter"
 require "log4r/outputter/syslogoutputter"
+require "log4r/outputter/seattlerb_syslogoutputter"
 require "log4r/loggerfactory"
 require "test/log_sql_per_test.rb"
 
